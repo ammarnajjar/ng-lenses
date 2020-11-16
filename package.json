@@ -4,12 +4,10 @@
   "scripts": {
     "ng": "ng",
     "lint": "ng lint",
-    "start": "ng serve",
+    "start": "ng serve --port 3100",
     "build": "ng build",
-    "test": "yarn test:lib:watch",
-    "test:ci": "yarn test:lib",
-    "test:lib": "jest --coverage --config ./projects/lenses/jest.config.js",
-    "test:lib:watch": "jest --watch --coverage --config ./projects/lenses/jest.config.js",
+    "test": "jest --watch --coverage --config ./projects/lenses/jest.config.js",
+    "test:demo": "jest --watch --coverage --config ./projects/demo/jest.config.js",
     "postinstall": "husky install"
   },
   "private": true,

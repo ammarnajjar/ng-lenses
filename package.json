@@ -16,6 +16,26 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*.{js,jsx,ts,tsx}",
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/build/",
+      "!<rootDir>/public/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ]
+  },
   "dependencies": {
     "@angular/animations": "~11.0.0",
     "@angular/common": "~11.0.0",

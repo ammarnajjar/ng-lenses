@@ -21,14 +21,6 @@
             }
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/lenses/src/test.ts",
-            "tsConfig": "projects/lenses/tsconfig.spec.json",
-            "karmaConfig": "projects/lenses/karma.conf.js"
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -36,9 +28,7 @@
               "projects/lenses/tsconfig.lib.json",
               "projects/lenses/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

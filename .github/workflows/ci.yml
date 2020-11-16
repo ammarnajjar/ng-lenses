@@ -17,17 +17,17 @@ jobs:
         with:
           node-version: 14
 
-      - name: Update Packages
+      - name: Install Packages
         run: |
           yarn install --frozen-lockfile
 
-      - name: Linter
+      - name: Lint
         run: |
           yarn lint
 
-      - name: Tests
+      - name: Test
         run: |
-          yarn test --coverage --watchAll false
+          yarn test:ci
 
       - name: Build
         run: |

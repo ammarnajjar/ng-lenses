@@ -1,6 +1,8 @@
 {
   "compileOnSave": false,
+  "esModuleInterop": true,
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -15,15 +17,10 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
+    "esModuleInterop": true,
     "paths": {
-      "lenses": [
-        "dist/lenses/lenses",
-        "dist/lenses"
-      ]
+      "lenses": ["dist/lenses/lenses", "dist/lenses"]
     }
   },
   "angularCompilerOptions": {

@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "lenses": {
+      "projectType": "library",
+      "root": "projects/lenses",
+      "sourceRoot": "projects/lenses/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/lenses/tsconfig.lib.json",
+            "project": "projects/lenses/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lenses/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lenses/src/test.ts",
+            "tsConfig": "projects/lenses/tsconfig.spec.json",
+            "karmaConfig": "projects/lenses/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lenses/tsconfig.lib.json",
+              "projects/lenses/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "lenses"
 }

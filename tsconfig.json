@@ -20,7 +20,8 @@
     "lib": ["es2018", "dom"],
     "esModuleInterop": true,
     "paths": {
-      "lenses": ["dist/lenses/lenses", "dist/lenses"]
+      "lenses": ["dist/lenses/lenses", "dist/lenses"],
+      "@lenses": ["projects/lenses/src/public-api.ts"]
     }
   },
   "angularCompilerOptions": {

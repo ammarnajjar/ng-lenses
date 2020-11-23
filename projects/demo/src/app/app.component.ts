@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
+
+  ipValue = '192.168.114.115';
 }

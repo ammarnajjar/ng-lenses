@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
-import { LensesComponent } from './lenses.component';
-
-
+import { IpModule } from './ip/ip.module';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  declarations: [LensesComponent],
-  imports: [
-  ],
-  exports: [LensesComponent]
+  declarations: [],
+  imports: [IpModule, MaterialModule],
+  exports: [IpModule, MaterialModule],
 })
-export class LensesModule { }
+export class LensesModule {}

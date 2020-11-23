@@ -1,0 +1,17 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      type="text"
+      matInput
+      [formControl]="ipAddress"
+      placeholder="Ex. 10.10.10.10"
+    />
+    <mat-error *ngIf="ipAddress.errors">
+      Please enter a valid IP address
+    </mat-error>
+    <mat-error *ngIf="ipAddress.hasError('required')">
+      IP is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
